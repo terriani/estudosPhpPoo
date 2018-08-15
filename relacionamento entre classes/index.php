@@ -17,7 +17,7 @@ $l[1]->status();
 $c = new Luta();
 
 
-echo "<br><br>";
+echo "<br><br><br>";
 
 $c->marcarLuta($l[0], $l[1]);
 
