@@ -26,7 +26,7 @@ class Pessoa{
     return $this->idade;
     }
 
-    public function setIdade($idade)
+    private function setIdade($idade)
     {
     $this->idade = $idade;
 
