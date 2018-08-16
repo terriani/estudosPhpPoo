@@ -12,3 +12,5 @@ $livro->setLeitor($leitor->getNome());
 print_r( $livro->getLeitor());
 
 print_r ($livro->detalhes());
+
+echo "--------------------------------------------------------------------------------------------------";
