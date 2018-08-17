@@ -76,23 +76,23 @@ class Livro implements Publicacao{
     }
 
     //metodos obrigatorios da interface
-    public function abrir(){
+    public function abrir(){ //falta fazer validação
         $this->setAberto(true);
     }
 
-    public function fechar(){
+    public function fechar(){ //falta fazer validação
         $this->setAberto(false);
     }
 
-    public function folhear(){
+    public function folhear(){ //falta fazer validação
         $this->setPagAtual($this-getPagAtual() + 1);
     }
 
-    public function avancarPag(){
+    public function avancarPag(){ //falta fazer validação
         $this->setPagAtual($this->getPagAtual() + 1);
     }
 
-    public function voltarPag(){
+    public function voltarPag(){ //falta fazer validação
         $this->setPagAtual($this->getPagAtual() - 1);
     }
 }
