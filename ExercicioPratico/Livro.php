@@ -70,29 +70,61 @@ class Livro implements Publicacao{
     }
 
     //metodo da classe
-    public function detalhes(){
+    public function detalhes(){ //incluir informações
+
+        //msg sobre o estafo do livro
+        if ($this->getAberto()===true) {
+            $this->setAberto("Aberto");
+        }else{
+            $this->setAberto("Fechado");
+        }
+        
         echo "<br>Livro: ". $this->getTitulo(). "<br> Autor: ". $this->getAutor().
-         "<br>Total de paginas: ". $this->getTotPaginas(). "<br>Leitor: ". $this->getLeitor(). "<br>";
+         "<br>Total de paginas: ". $this->getTotPaginas(). "<br>Leitor: ". $this->getLeitor(). "<br>". "Estado: ".$this->getAberto(). "<br>". "Pagina atual:".$this->getPagAtual(). "<br>" ;
     }
 
     //metodos obrigatorios da interface
-    public function abrir(){ //falta fazer validação
+    public function abrir(){ 
+        if ($this->getAberto() === true) {
+            return "Livro já esta aberto";
+        }else{
         $this->setAberto(true);
+        $this->setPagAtual($this->getPagAtual());
+        }
     }
 
-    public function fechar(){ //falta fazer validação
-        $this->setAberto(false);
+    public function fechar(){ 
+
+        if ($this->getAberto() === false) {
+            return "O livro já esta fachado";
+        }else{
+            $this->setAberto(false);
+        }
     }
 
     public function folhear(){ //falta fazer validação
-        $this->setPagAtual($this-getPagAtual() + 1);
+
+        if ($this->getAberto() === false) {
+            return "O livro esta fechado";
+        }else{
+            $this->setPagAtual($this->getPagAtual() + 1);
+        }
+
     }
 
     public function avancarPag(){ //falta fazer validação
-        $this->setPagAtual($this->getPagAtual() + 1);
+        if ($this->getAberto() === false) {
+            return "O livro esta fechado";
+        }else{
+            $this->setPagAtual($this->getPagAtual() + 1);
+        }
     }
 
     public function voltarPag(){ //falta fazer validação
-        $this->setPagAtual($this->getPagAtual() - 1);
+        if ($this->getAberto() === false) {
+            return "O livro esta fechado";
+        }else{
+            $this->setPagAtual($this->getPagAtual() - 1);
+        }
     }
 }
