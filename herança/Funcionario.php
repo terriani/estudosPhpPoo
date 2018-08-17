@@ -9,19 +9,13 @@ class Funcionario extends Pessoa{
 
     
 
-    /**
-     * Get the value of setor
-     */ 
+   
     public function getSetor()
     {
         return $this->setor;
     }
 
-    /**
-     * Set the value of setor
-     *
-     * @return  self
-     */ 
+    
     public function setSetor($setor)
     {
         $this->setor = $setor;
@@ -29,19 +23,13 @@ class Funcionario extends Pessoa{
         return $this;
     }
 
-    /**
-     * Get the value of trabalhando
-     */ 
+    
     public function getTrabalhando()
     {
         return $this->trabalhando;
     }
 
-    /**
-     * Set the value of trabalhando
-     *
-     * @return  self
-     */ 
+   
     public function setTrabalhando($trabalhando)
     {
         $this->trabalhando = $trabalhando;
