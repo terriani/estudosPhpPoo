@@ -70,7 +70,7 @@ class Livro implements Publicacao{
     }
 
     //metodo da classe
-    public function detalhes(){ //incluir informações
+    public function detalhes(){ 
 
         //msg sobre o estafo do livro
         if ($this->getAberto()===true) {
@@ -102,7 +102,7 @@ class Livro implements Publicacao{
         }
     }
 
-    public function folhear(){ //falta fazer validação
+    public function folhear(){
 
         if ($this->getAberto() === false) {
             return "O livro esta fechado";
@@ -112,7 +112,7 @@ class Livro implements Publicacao{
 
     }
 
-    public function avancarPag(){ //falta fazer validação
+    public function avancarPag(){
         if ($this->getAberto() === false) {
             return "O livro esta fechado";
         }else{
@@ -120,7 +120,7 @@ class Livro implements Publicacao{
         }
     }
 
-    public function voltarPag(){ //falta fazer validação
+    public function voltarPag(){
         if ($this->getAberto() === false) {
             return "O livro esta fechado";
         }else{
