@@ -9,3 +9,5 @@ require_once "Professor.php";
 $a = new Aluno("joao", 18, "masc");
 
 print_r($a1);
+
+echo "-----";
