@@ -30,6 +30,17 @@ class Mamifero extends Animal{
 
     //metodos sobrescritos da classe Aanimal
     public function locomover(){
-        
+        echo "correndo";
     }
+
+    public function almentar(){
+        echo "mamando";
+    }
+
+    public function emitirSom(){
+        echo "som de mamifero";
+    }
+
+    
+
 }
