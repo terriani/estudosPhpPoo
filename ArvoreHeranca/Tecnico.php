@@ -28,7 +28,14 @@ class Tecnico extends Aluno{
         return $this;
     }
 
+    //construct
+    public function __construct($nome, $idade, $sexo, $matr, $curso, $registroProfissional){
+        parent::__construct($nome, $idade, $sexo, $matr, $curso);
+
+        $this->registroProfisional = $registroProfissional;
+    }
+
     public function praticar(){
-        return "estou praticndo";
+        return "O ".$this->getNome()." esta praticndo";
     }
 }

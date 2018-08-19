@@ -49,7 +49,16 @@ class Aluno extends Pessoa{
         return $this;
     }
 
+
+    //construtor
+    public function __costruct($nome, $idade, $sexo, $matr, $curso){
+        parent::__construct($nome, $idade, $sexo);
+
+        $this->matr = $matr;
+        $this->curso = $curso;
+    }
+
     public function pagarMensalidade(){
-        return "a mensalidade foi paga";
+        return "a mensalidade do aluno: ".$this->getNome()." foi paga";
     }
 }

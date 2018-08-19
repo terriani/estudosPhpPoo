@@ -50,6 +50,14 @@ class Professor extends Pessoa{
         return $this;
     }
 
+    //construtor
+    public function __construct($nome, $idade, $sexo, $especialidade, $salario){
+        parent::_construct($nome, $idade, $sexo);
+
+        $this->espacialidade = $especialidade;
+        $this->salario = $salario; 
+    }
+
     public function receberAumento($aumento){
         $this->setSalario($this->getSalario() + $aumento);
     }

@@ -7,8 +7,17 @@ abstract class  Pessoa{
     private $idade = 0;
     private $sexo;
 
-    final public function fazerNiver(){
+
+    //metodo da classe
+    public final function fazerNiver(){
         $this->setIdade($this->getIdade() + 1);
+    }
+
+    //metodo construtor
+    public function __construct($nome, $idade, $sexo){
+        $this->nome = $nome;
+        $this->idade = $idade;
+        $this->sexo = $sexo;
     }
 
 

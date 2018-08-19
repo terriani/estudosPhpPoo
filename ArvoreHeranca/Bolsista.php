@@ -16,11 +16,18 @@ class Bolsista extends Aluno{
     }
 
     public function renovarBolsa(){
-        return "a bolsa foi renovada";
+        return "a bolsa do aluno: ".$this->getNome()." foi renovada";
+    }
+
+    //construct
+    public function __construct($nome, $idade, $sexo, $matr, $curso, $bolsa){
+        parent::__construct($nome, $idade, $sexo, $matr, $curso);
+
+        $this->bolsa = $bolsa;
     }
 
     public function pagarMensalidade(){
-        return "a mensalidade de bolsista foi paga";
+        return "a mensalidade de bolsista: ".$this->getNome()." foi paga";
     }
 
 }
