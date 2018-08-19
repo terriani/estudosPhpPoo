@@ -37,4 +37,10 @@ class Reptil extends Animal{
 
         return $this;
     }
+
+    //construtor
+    public function __construct($peso, $idade, $membros, $corEscama){
+        parent::__construct($peso, $idade, $membros);
+        $this->cor = $corEscama;
+    }
 }

@@ -33,7 +33,7 @@ class Mamifero extends Animal{
         echo "correndo";
     }
 
-    public function almentar(){
+    public function alimentar(){
         echo "mamando";
     }
 
@@ -41,6 +41,11 @@ class Mamifero extends Animal{
         echo "som de mamifero";
     }
 
+    //construtor sobrescrito da classe animal
+    public function __construct($peso, $idade, $membros, $corPelo){
+        parent::__construct($peso, $idade, $membros);
+        $this->corPelo = $corPelo;
+    }
     
 
 }

@@ -43,4 +43,10 @@ class Peixe extends Animal{
     public function emitirSom(){
         echo "peixe não faz barulho";
     }
+
+    //construtor
+    public function __construct($peso, $idade, $membros, $corEscama){
+        parent::__construct($peso, $idade, $membros);
+        $this->cor = $corEscama;
+    }
 }

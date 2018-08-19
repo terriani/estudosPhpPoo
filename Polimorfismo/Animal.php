@@ -71,4 +71,11 @@ abstract class Animal{
     abstract public function locomover();
     abstract public function alimentar();
     abstract public function emitirSom();
+
+    //construtor
+    public function __construtor($peso, $idade, $membros){
+        $this->peso = $peso;
+        $this->idade = $idade;
+        $this->membros = $membros;
+    }
 }

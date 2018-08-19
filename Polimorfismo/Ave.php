@@ -45,4 +45,10 @@ class Ave extends Animal{
     public function emitirSom(){
         echo "som de ave";
     }
+
+    //construtor
+    public function __construct($peso, $idade, $membros, $corPena){
+        parent::__construct($peso, $idade, $membros);
+        $this->corPena = $corPena;
+    }
 }
