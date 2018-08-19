@@ -2,9 +2,9 @@
 
 abstract class Animal{
 
-    protected $peso;
-    protected $idade;
-    protected $membros;
+    private $peso;
+    private $idade;
+    private $membros;
 
     
 
