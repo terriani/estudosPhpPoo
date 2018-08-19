@@ -59,6 +59,6 @@ class Aluno extends Pessoa{
     }
 
     public function pagarMensalidade(){
-        return "a mensalidade do aluno: ".$this->getNome()." foi paga";
+        echo "a mensalidade do aluno: ".$this->getNome()." foi paga";
     }
 }

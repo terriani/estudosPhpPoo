@@ -14,4 +14,6 @@ $b1->setCurso("sistemas");
 $b1->fazerNiver();
 $b1->fazerNiver();
 
+$b1->pagarMensalidade();
+
 print_r($b1);

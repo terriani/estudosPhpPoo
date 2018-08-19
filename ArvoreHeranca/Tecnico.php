@@ -36,6 +36,6 @@ class Tecnico extends Aluno{
     }
 
     public function praticar(){
-        return "O ".$this->getNome()." esta praticndo";
+        echo "O ".$this->getNome()." esta praticndo";
     }
 }

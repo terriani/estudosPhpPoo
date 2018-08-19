@@ -16,7 +16,7 @@ class Bolsista extends Aluno{
     }
 
     public function renovarBolsa(){
-        return "a bolsa do aluno: ".$this->getNome()." foi renovada";
+        echo "a bolsa do aluno: ".$this->getNome()." foi renovada";
     }
 
     //construct
@@ -27,7 +27,7 @@ class Bolsista extends Aluno{
     }
 
     public function pagarMensalidade(){
-        return "a mensalidade de bolsista: ".$this->getNome()." foi paga";
+        echo "a mensalidade de bolsista: ".$this->getNome()." foi paga";
     }
 
 }
