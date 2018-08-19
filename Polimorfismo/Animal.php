@@ -2,9 +2,9 @@
 
 abstract class Animal{
 
-    private $peso;
-    private $idade;
-    private $membros;
+    protected $peso;
+    protected $idade;
+    protected $membros;
 
     
 
@@ -73,7 +73,7 @@ abstract class Animal{
     abstract public function emitirSom();
 
     //construtor
-    public function __construtor($peso, $idade, $membros){
+    public function __construct($peso, $idade, $membros){
         $this->peso = $peso;
         $this->idade = $idade;
         $this->membros = $membros;
