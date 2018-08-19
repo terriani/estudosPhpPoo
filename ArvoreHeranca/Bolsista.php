@@ -19,4 +19,8 @@ class Bolsista extends Aluno{
         return "a bolsa foi renovada";
     }
 
+    public function pagarMensalidade(){
+        return "a mensalidade de bolsista foi paga";
+    }
+
 }
