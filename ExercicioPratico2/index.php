@@ -21,8 +21,6 @@
 
             $v[2] = new Video("aula 15 html5");
 
-            $v[2]->like();
-
             //$v[1]->play();
 
             //$v[0]->pause();
