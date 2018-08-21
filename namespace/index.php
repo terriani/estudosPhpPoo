@@ -9,6 +9,12 @@
 <body>
     <?php
         
+        require_once "lib/Teste.php";
+
+        use Terriani\Vinicius\Teste;
+
+        $teste = new Teste();
+
     ?>
 </body>
 </html>
