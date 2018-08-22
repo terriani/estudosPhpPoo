@@ -11,9 +11,11 @@
     <pre>
         <?php
 
-            require_once "Video.php";
-            require_once "Gafanhoto.php";
-            require_once "Visualizacao.php";
+            //require_once "Video.php";
+            //require_once "Gafanhoto.php";
+            //require_once "Visualizacao.php";
+
+            require_once "lib/autoload.php";
 
             $v[0] = new Video("aula 1 poo");
 
