@@ -1,5 +1,8 @@
 <?php
 require_once "lib/autoload.php";
+//error_reporting(0);
+
+
 $session = new Session;
 ?>
 
@@ -13,7 +16,7 @@ $session = new Session;
 </head>
 <body>
     <h1>Login</h1>
-    <form action="" method="get">
+    <form action="" method="post">
         <input type="text" name="login" placeholder="login">
         <input type="password" name="pass" placeholder="senha">
         <input type="submit" value="enviar">
