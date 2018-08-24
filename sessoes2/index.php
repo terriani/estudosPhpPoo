@@ -2,7 +2,6 @@
 <?php
 require_once "lib/autoload.php";
 $session = new Session();
-$session->getSession('teste');
 ?>
 
 <!DOCTYPE html>
