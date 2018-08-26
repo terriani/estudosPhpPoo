@@ -1,7 +1,12 @@
 
 <?php
 require_once "lib/autoload.php";
+require_once "lib/ReadSession.php";
 $session = new Session();
+$session->setSession('email', 'viniterriani.vt@gmail.com');
+echo $session->getSession('email');
+//$session->isValid();
+$session->register('2 sec');
 ?>
 
 <!DOCTYPE html>
