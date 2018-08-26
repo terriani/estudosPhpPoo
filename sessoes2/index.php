@@ -6,7 +6,7 @@ $session = new Session();
 $session->setSession('email', 'viniterriani.vt@gmail.com');
 echo $session->getSession('email');
 //$session->isValid();
-$session->register('2 sec');
+$session->register();
 ?>
 
 <!DOCTYPE html>

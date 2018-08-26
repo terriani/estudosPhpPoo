@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 class Session
 {
 
@@ -24,7 +24,10 @@ class Session
     public function getSession($field)
     {
         if ($_SESSION[$field]) {
-            return $this->has($field);
+            //return $this->has($field);
+            return $_SESSION[$field];
+
+            
         }
     
         return null;
@@ -37,7 +40,7 @@ class Session
         $this->setSession("expire", strtotime("+ $strTime"));
     }
 
-    public function register($duration = '5 seconds')
+    public function register($duration = '5 sec')
     {
         $this->setExpireTime($duration);
     }
@@ -54,6 +57,7 @@ class Session
     {
         $_SESSION = [];
         session_destroy();
+        return true;
     }
 
     private function renewSession()
@@ -64,7 +68,7 @@ class Session
 
     public function isValid()
     {
-        if ($this->expired() === true) {
+        if ($this->expired() === false) {
             $this->destroySession();
             return true;
         }
