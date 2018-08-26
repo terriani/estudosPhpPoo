@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+
 class Session
 {
 
@@ -23,7 +23,7 @@ class Session
 
     public function getSession($field)
     {
-        if ($_SESSION[$field]) {
+        if ($this->has($field)) {
             //return $this->has($field);
             return $_SESSION[$field];
 
@@ -69,10 +69,10 @@ class Session
     public function isValid()
     {
         if ($this->expired() === false) {
-            $this->destroySession();
+            $this->renewSession();
             return true;
         }
-        $this->renewSession();
+        $this->destroySession();
         return false;
     }
 }

@@ -1,12 +1,13 @@
 
 <?php
+error_reporting(0);
 require_once "lib/autoload.php";
 require_once "lib/ReadSession.php";
 $session = new Session();
 $session->setSession('email', 'viniterriani.vt@gmail.com');
-echo $session->getSession('email');
+//echo $session->getSession('email');
 //$session->isValid();
-$session->register();
+$session->register('2 sec');
 ?>
 
 <!DOCTYPE html>

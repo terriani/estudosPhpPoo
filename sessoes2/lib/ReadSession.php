@@ -10,6 +10,6 @@ if ($session->isValid() === false) {
 }
 
 else {
-    //echo $session->getSession('email');
+    print_r( $session->getSession('email'));
     echo session_name();
 }
