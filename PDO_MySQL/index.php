@@ -40,11 +40,30 @@ catch(PDOException $e){
   //exibe a msg de erro (getMesssage() pega a msg de erro vinda do PDOException)
     exit('ERR' . $e->getMessage());
 
-}
+  }
 
+
+
+
+//atualiza dados no banco de dados
+/*$update = $pdo->exec("
+  UPDATE funcionarios
+  SET nome = 'vinicius terriani', 
+  idade = 29,
+  email = 'vinicius.terriani@hotmail.com' 
+  WHERE id = 25
+");*/
 
 //insere um funcionario na tabela para teste
-//$insert = $conn->query('INSERT INTO funcionarios (nome, idade, email) VALUES ("joao", 22, "joao@j.com")');
+/*$insert = $pdo->exec("
+   INSERT INTO funcionarios
+   (nome, idade, email) 
+   VALUES 
+   ('joao', 22, 'joao@j.com')
+ ");*/
+
+  //deletando arquivos do banco de dados
+ /*$delete = $pdo->exec("DELETE FROM funcionarios WHERE id in (21, 22, 23)");*/
 
 
 //executa uma busca no banco com pdo
