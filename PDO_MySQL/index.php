@@ -10,6 +10,7 @@ $user = "root";
 //senha
 $pass = "";
 
+
 //configurações inicias do pdo
 $options = [
 
