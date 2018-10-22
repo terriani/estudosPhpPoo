@@ -32,6 +32,22 @@ try{
     $pdo = new PDO($dns, $user, $pass, $options);
 
 
+    //recebe uma variavel para busca no banco de dados via ID
+    $id = $_GET['id'];
+    $name = "vinicius terriani";
+
+    //prepara uma query para executar uma busca no banco com pdo
+    $stmt = $pdo->prepare('SELECT id, nome, idade, email FROM funcionarios WHERE id =:id AND nome =:name');
+
+
+    //executa o bind das variaeis e placehlders
+    $stmt->bindValue(':id', $id);
+    $stmt->bindValue(':name', $name);
+
+    //executa a query
+    $stmt->execute();
+
+
 }
 
 //caso de erro na conexão executa  uma msg de erro
@@ -65,9 +81,6 @@ catch(PDOException $e){
   //deletando arquivos do banco de dados
  /*$delete = $pdo->exec("DELETE FROM funcionarios WHERE id in (21, 22, 23)");*/
 
-
-//executa uma busca no banco com pdo
-$stmt = $pdo->query('SELECT id, nome, idade, email FROM funcionarios');
 
 ?>
 
