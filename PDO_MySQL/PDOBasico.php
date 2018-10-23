@@ -13,7 +13,7 @@ $pass = "";
 
 //configurações inicias do pdo
 $options = [
-
+  
   //testa se já existe uma conexão identica caso já exixta o pdo se conecta por ela não abrindo uma nova conexão  
   PDO::ATTR_PERSISTENT => true,
 
