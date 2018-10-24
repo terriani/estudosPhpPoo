@@ -5,7 +5,7 @@ require_once "autoload/autoload.php";
 
 
 
-    $query = new Orm("mysql", "127.0.0.1", "estudos_PDO", "root", "", true);
+    $query = new DB("mysql", "127.0.0.1", "estudos_PDO", "root", "", true);
 
     $func = $query->select("SELECT id, nome, idade, email FROM funcionarios WHERE id<:id", ["id" => 29]);
 

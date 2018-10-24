@@ -1,6 +1,6 @@
 <?php
 
-class Orm extends PDO
+class DB extends PDO
 {
     public function __construct($sgdb, $host, $dbName, $user, $password, $persistent)
     {
