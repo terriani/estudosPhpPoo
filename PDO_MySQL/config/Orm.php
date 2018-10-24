@@ -12,8 +12,9 @@ class Orm extends PDO
         ];
 
         $dns = "$sgdb:host=$host;dbname=$dbName;charset=utf8";
-        
+
         parent::__construct($dns, $user, $password, $option);
+        
     }
 
 
